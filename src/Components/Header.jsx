@@ -4,7 +4,8 @@ const Header = () => {
 
   return (
     <div>
-      <h1>Our Header</h1>
+      <h1>This section for Header</h1>
+      <hr />
     </div>
   )
 }

@@ -1,20 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+import Todo_page from './Components/Pages/Todo_page';
 import Header from './Components/Header';
-import { NotesListpages } from './Components/Pages/NotesListpages';
-import { Listitem } from './Components/Pages/Listitem';
-
-
+import Singel_todo from './Components/Another_pages/Singel_todo';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <NotesListpages/>
-      {/*<Listitem/>*/}
- 
+    <Router>
+      <div className="App">
+        <Header/>
 
-      
-    </div>
+        <Routes>
+
+            <Route path='/' exact element={<Todo_page />} />
+            <Route path='/note/:id' element={<Singel_todo />} />
+
+        </Routes>
+        
+
+      </div>
+
+    </Router>
+
   );
 }
 
