@@ -10,6 +10,8 @@ function Listitem(props) {
     fetch(`/api/delete/${id}/`,{
         method: 'DELETE',
     })
+
+
 }
   return (
     <ol>
@@ -20,6 +22,10 @@ function Listitem(props) {
               <p> {item.body}</p>
             </Link>
             <button onClick={handleDelete.bind(this,item.id)}>Delete</button>
+            <Link to ={`/update/${item.id}`}>
+              <button>Edit</button>
+            
+            </Link>
 
         </li>
       ))}
